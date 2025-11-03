@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เข้าสู่ระบบ | ชุมพรแทรเวล</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* พื้นหลังเท่ ๆ แบบ gradient */
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Prompt', sans-serif;
+      background: linear-gradient(135deg, #008080, #00c6ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-box {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      width: 320px;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    .login-box h2 {
+      margin-bottom: 20px;
+      color: #008080;
+      font-weight: 600;
+    }
+
+    .login-box input {
+      width: 85%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .login-box button {
+      width: 90%;
+      padding: 12px;
+      margin-top: 15px;
+      background: #008080;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-box button:hover {
+      background: #00a5a5;
+    }
+
+    #error {
+      color: red;
+      margin-top: 10px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>เข้าสู่ระบบ</h2>
+    <input type="text" id="username" placeholder="ชื่อผู้ใช้ (user)">
+    <input type="password" id="password" placeholder="รหัสผ่าน เช่น (1234)">
+    <button onclick="login()">เข้าสู่ระบบ</button>
+    <p id="error"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
